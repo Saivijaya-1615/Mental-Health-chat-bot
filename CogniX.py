@@ -5,7 +5,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Set page config
-st.set_page_config(page_title="Cognix", page_icon="🧘", layout="centered")
+st.set_page_config(page_title="CogniX 🧘", page_icon="🧘", layout="centered")
 
 # Initialize session state for chat history
 if "messages" not in st.session_state:
@@ -43,7 +43,7 @@ def find_closest_question(user_query, vectorizer, question_vectors, df):
     if best_match_score > 0.3:  # Threshold for similarity
         return df.iloc[best_match_index]['Answers']
     else:
-        return "Sorry Cann't help You😞. Can plz try after some time"
+        return None
 
 # Streamlit app
 st.title("CogniX")
