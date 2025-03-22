@@ -43,7 +43,7 @@ def find_closest_question(user_query, vectorizer, question_vectors, df):
     if best_match_score > 0.3:  # Threshold for similarity
         return df.iloc[best_match_index]['Answers']
     else:
-        return "Sorry Cann't help You😞. Can plz try after some time'
+        return "Sorry Cann't help You😞. Can plz try after some time"
 
 # Streamlit app
 st.title("CogniX")
